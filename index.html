@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 style="text-align: center; text-decoration: underline;">Shareable Online Resume Builder</h1>
+  
+  <form id="resume-form"> <!-- Corrected form ID -->
+    <fieldset>
+        <legend>Personal Information</legend>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+    </fieldset>
+
+    <fieldset>
+        <legend>Objective</legend>
+        <label for="objective">Objective:</label>
+        <textarea name="objective" id="objective" rows="5" placeholder="Write your career objective here." required></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Languages</legend>
+        <label for="languages">Languages:</label>
+        <textarea name="languages" id="languages" rows="5" placeholder="Enter the languages you speak." required></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Education</legend>
+        <label for="education">Education:</label>
+        <textarea name="education" id="education" rows="5" placeholder="List your educational qualifications here." required></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Experience</legend>
+        <label for="experience">Experience:</label>
+        <textarea name="experience" id="experience" rows="5" placeholder="List your previous work experience here." required></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Skills</legend>
+        <label for="skills">Skills:</label>
+        <textarea name="skills" id="skills" rows="5" placeholder="List your skills here." required></textarea>
+    </fieldset>
+
+    <button type="submit" style="display: block; margin: 20px auto;">Create Your Resume</button>
+  </form>
+
+  <!-- Dynamic and Editable Resume -->
+  <div id="resume-display" contenteditable="true" style="border: 1px solid #000; padding: 10px; margin: 20px 0;">
+    <!-- The dynamically generated resume will appear here -->
+  </div>
+
+  <!-- Shareable link and download option -->
+  <fieldset style="width: 400px; margin: 0 auto; border: 2px solid #302828; padding: 20px; text-align: center;">
+    <div id="shareable-link-container" style="display: none;">
+      <h2>Shareable Link</h2>
+      <a href="#" id="shareable-link" target="_blank">Click to view your resume</a>
+      <br><br>
+      <strong>You can download your resume as a PDF here:</strong>
+      <br><br>
+      <button id="download-pdf">Download PDF</button>
+    </div>
+  </fieldset>
+
+  <script src="./app.js"></script> <!-- Ensure this JavaScript file exists and is linked correctly -->
+</body>
+</html>
